@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Querys>
+    <!-- Query to create the employees table -->
+    <query id="q1">
+        <![CDATA[ 
+            CREATE TABLE employees (
+                EmployeeID varchar(10) not null, 
+                Fullname varchar(25), 
+                Address varchar(50), 
+                Faculty varchar(20), 
+                Department varchar(25), 
+                Designation varchar(20), 
+                primary key (EmployeeID)
+            )
+        ]]>
+    </query>
+
+    <!-- Query to drop the employees table if it exists -->
+    <query id="q2">
+        <![CDATA[ 
+            DROP TABLE IF EXISTS employees 
+        ]]>
+    </query>
+
+    <!-- Query to insert a new employee record into the employees table -->
+    <query id="q3">
+        <![CDATA[ 
+            INSERT INTO employees (EmployeeID, Fullname, Address, Faculty, Department, Designation) 
+            VALUES (?, ?, ?, ?, ?, ?) 
+        ]]>
+    </query>
+
+    <!-- Query to select an employee record by EmployeeID -->
+    <query id="q4">
+        <![CDATA[ 
+            SELECT * FROM employees 
+            WHERE employees.EmployeeID = ? 
+        ]]>
+    </query>
+
+    <!-- Query to select all employee records from the employees table -->
+    <query id="q5">
+        <![CDATA[ 
+            SELECT * FROM employees 
+        ]]>
+    </query>
+
+    <!-- Query to delete an employee record by EmployeeID -->
+    <query id="q6">
+        <![CDATA[ 
+            DELETE FROM employees 
+            WHERE employees.EmployeeID = ? 
+        ]]>
+    </query>
+</Querys>
