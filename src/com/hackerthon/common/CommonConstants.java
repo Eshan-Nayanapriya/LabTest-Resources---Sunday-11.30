@@ -89,7 +89,7 @@ public class CommonConstants {
     // XPath tag name for the employee department element in the XML
     public static final String EMPLOYEE_DEPARTMENT = "Department";
 
-    // XPath tag name for the employee designation element in the XML
+    // XPath tag name for employee designation element in the XML
     public static final String EMPLOYEE_DESIGNATION = "Designation";
 
 }
